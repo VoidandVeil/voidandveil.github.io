@@ -35,7 +35,7 @@
     }
 
     #terms-box h2 { color: #86d9ca; }
-    #accept-btn {
+    #accept-btn, #decline-btn {
       background-color: #86d9ca;
       color: #111;
       padding: 0.5rem 1rem;
@@ -44,6 +44,7 @@
       margin-top: 1rem;
       cursor: pointer;
     }
+    #decline-btn { background-color: #ccc; color: #111; margin-left: 1rem; }
   </style>
 </head>
 <body>
@@ -54,7 +55,14 @@
       The cultivation or use of psilocybin mushrooms may be illegal in your country or state.<br>
       Always check your <strong>local laws</strong> before engaging in any form of mushroom cultivation or use.</p>
       <p>By continuing, you confirm you are <strong>over 18 years old</strong> and understand this content is not a guide to illegal activity.</p>
+      
+      <label style="display: block; margin: 1rem 0;">
+        <input type="checkbox" id="dont-show-checkbox">
+        Don't show this popup again.
+      </label>
+      
       <button id="accept-btn">Accept & Enter</button>
+      <button id="decline-btn">Decline</button>
     </div>
   </div>
 
@@ -67,89 +75,4 @@
     <ul>
       <li>Episode 1: Welcome to Mushroom Growing!</li>
       <li>Episode 2: Understanding the Magic of Mycelium</li>
-      <li>Episode 3: Your First Mushroom – Psilocybe cubensis</li>
-      <li>Episode 4: Setting Up Your Grow Space</li>
-      <li>Episode 5: Spores – Where to Get Them and What to Do</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🍰 Hands-On Cultivation</h2>
-    <ul>
-      <li>Episode 6: The Easy Way – PF Tek Step-by-Step</li>
-      <li>Episode 7: Taking It Further – From PF Tek to Fruiting Chambers</li>
-      <li>Episode 8: Beyond the Basics – Growing from a Kit</li>
-      <li>Episode 9: Mastering Sterilization – Pressure Cookers & Equipment Safety</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🧪 Lab Work & Expansion</h2>
-    <ul>
-      <li>Episode 10: Agar Work for Beginners – Cloning and Isolation</li>
-      <li>Episode 11: Building a Still Air Box or DIY Flow Hood</li>
-      <li>Episode 12: Stocking Your Myco Lab</li>
-      <li>Episode 13: When to Use Liquid Culture</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🌾 Scaling Up & Going Bulk</h2>
-    <ul>
-      <li>Episode 14: Grains – An Alternative to BRF Cakes</li>
-      <li>Episode 15: Bulk Growing for Bigger Yields</li>
-      <li>Episode 16: Advanced Contamination Control</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🧬 Genetics, Cloning & Culture Libraries</h2>
-    <ul>
-      <li>Episode 17: Cloning Mushrooms and Preserving Genetics</li>
-      <li>Episode 18: Long-Term Culture Storage – Prints, Slants, and Tubes</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>📔 Harvest & Documentation</h2>
-    <ul>
-      <li>Episode 19: Logging Your Grows – Notebooks, Tags, and Digital Tracking</li>
-      <li>Episode 20: Harvesting, Drying, & Storing Mushrooms</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>🌌 Reflection & Responsible Use</h2>
-    <ul>
-      <li>Episode 21: Responsible Consumption and Microdosing</li>
-      <li>Episode 22: The Future of Psilocybin</li>
-      <li>Episode 23: Psilocybin Mushrooms and the Law</li>
-    </ul>
-  </div>
-
-  <div class="disclaimer">
-    <strong>Disclaimer:</strong> This podcast is for educational purposes only. The cultivation or use of psilocybin mushrooms may be illegal in your country or state. Always check your local laws before engaging in any form of mushroom cultivation or use.
-  </div>
-
-  <div class="license">
-    This work is licensed under a 
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
-      Creative Commons Attribution-NonCommercial 4.0 International License
-    </a>.
-  </div>
-
-  <script>
-    const overlay = document.getElementById("terms-overlay");
-    const btn = document.getElementById("accept-btn");
-
-    if (localStorage.getItem("accepted_terms") === "yes") {
-      overlay.style.display = "none";
-    }
-
-    btn.addEventListener("click", () => {
-      localStorage.setItem("accepted_terms", "yes");
-      overlay.style.display = "none";
-    });
-  </script>
-</body>
-</html>
+      <li
