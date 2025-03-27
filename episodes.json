@@ -1,0 +1,118 @@
+{
+    "1": {
+      "title": "Episode 1 – Welcome to Mushroom Growing",
+      "description": "Unlock the secrets of growing your own 'magical' mushrooms with our educational podcast, guiding you through the process step-by-step while navigating the legal landscape.",
+      "audioSrc": "https://archive.org/download/sample-mp3_202103/Archive_Test.mp3"
+    },
+    "2": {
+      "title": "Episode 2 – Understanding the Magic of Mycelium",
+      "description": "Unearth the magic of mycelium, the hidden network beneath the mushroom, and discover why understanding it is key to successful psilocybin cultivation in this beginner's guide.",
+      "audioSrc": "https://example.com/audio/ep2.mp3"
+    },
+    "3": {
+      "title": "Episode 3 – Your First Mushroom – Psilocybe cubensis",
+      "description": "Ready to become a fungal wizard? Discover why Psilocybe cubensis is the friendly, forgiving, and widely supported gateway into the world of magic mushroom cultivation for beginners.",
+      "audioSrc": "https://example.com/audio/ep3.mp3"
+    },
+    "4": {
+      "title": "Episode 4 – Setting Up Your Grow Space",
+      "description": "Ready to cultivate your own mushrooms? This episode guides beginners through creating a clean, controlled, and discreet grow space, covering essential gear, setup for different stages, and budget-friendly options.",
+      "audioSrc": "https://example.com/audio/ep4.mp3"
+    },
+    "5": {
+      "title": "Episode 5 – Spores – Where to Get Them and What to Do",
+      "description": "Unlock the mysteries of psilocybin mushroom spores, from legally sourcing them for microscopy to proper storage, and understand their fundamental role in the fascinating world of mycology.",
+      "audioSrc": "https://example.com/audio/ep5.mp3"
+    },
+    "6": {
+      "title": "Episode 6 – The Easy Way – PF Tek Step-by-Step",
+      "description": "Learn the beginner-friendly PF Tek method step-by-step for cultivating your own psilocybin mushrooms using simple, affordable materials and a pressure cooker.",
+      "audioSrc": "https://example.com/audio/ep6.mp3"
+    },
+    "7": {
+      "title": "Ready to take your PF Tek jars to the next level? This episode guides you through birthing your colonized cakes, building a simple Shotgun Fruiting Chamber (SGFC), and mastering the environmental controls needed to trigger your first mushroom flush.",
+      "description": "Explore how to transition from PF Tek to creating optimal fruiting chambers for better yields.",
+      "audioSrc": "https://example.com/audio/ep7.mp3"
+    },
+    "8": {
+      "title": "Episode 8 – Beyond the Basics – Growing from a Kit",
+      "description": "Get started growing magic mushrooms quickly and easily with grow kits – the beginner-friendly way to fruit your own fungi before exploring more advanced cultivation techniques.",
+      "audioSrc": "https://example.com/audio/ep8.mp3"
+    },
+    "9": {
+      "title": "Episode 9 – Mastering Sterilization – Pressure Cookers & Equipment Safety",
+      "description": "Don't let mold ruin your grow! This episode reveals how pressure cookers are essential for sterilizing your mushroom cultivation supplies and preventing contamination, the number one cause of beginner failure.",
+      "audioSrc": "https://example.com/audio/ep9.mp3"
+    },
+    "10": {
+      "title": "Episode 10 – Agar Work for Beginners – Cloning and Isolation",
+      "description": "Unlock the secrets to cloning your best mushrooms, isolating superior genetics, and spotting contamination early with the beginner's guide to agar work.",
+      "audioSrc": "https://example.com/audio/ep10.mp3"
+    },
+    "11": {
+      "title": "Episode 11 – Building a Still Air Box or DIY Flow Hood",
+      "description": "Learn how to build and use a Still Air Box (SAB) and a Laminar Flow Hood to master sterile techniques and conquer contamination in your psilocybin mushroom cultivation.",
+      "audioSrc": "https://example.com/audio/ep11.mp3"
+    },
+    "12": {
+      "title": "Episode 12 – Stocking Your Myco Lab",
+      "description": "Level up your mushroom game with this episode's definitive guide to stocking your beginner-to-intermediate mycology lab with essential tools for sanitation, inoculation, substrate handling, and more.",
+      "audioSrc": "https://example.com/audio/ep12.mp3"
+    },
+    "13": {
+      "title": "Episode 13 – When to Use Liquid Culture",
+      "description": "Want to grow mushrooms faster and with more control? This episode dives into the world of liquid culture, explaining what it is, when to use it, how to make it, and how it can supercharge your cultivation game beyond spore syringes.",
+      "audioSrc": "https://example.com/audio/ep13.mp3"
+    },
+    "14": {
+      "title": "Episode 14 – Grains – An Alternative to BRF Cakes",
+      "description": "Ready to level up your mushroom growing game? This episode pitches grain spawn as the faster, stronger alternative to BRF cakes for bigger yields and bulk grows.",
+      "audioSrc": "https://example.com/audio/ep14.mp3"
+    },
+    "15": {
+      "title": "Episode 15 – Bulk Growing for Bigger Yields",
+      "description": "Ready to go big with your mushroom cultivation? Learn how to transform a single jar into a tub full of mushrooms with our guide to bulk growing for bigger yields!",
+      "audioSrc": "https://example.com/audio/ep15.mp3"
+    },
+    "16": {
+      "title": "Episode 16 – Advanced Contamination Control",
+      "description": "Learn how to identify, manage, and prevent the dreaded contamination in your mushroom grows to keep your fungal adventures on track",
+      "audioSrc": "https://example.com/audio/ep16.mp3"
+    },
+    "17": {
+      "title": "Episode 17 – Cloning Mushrooms and Preserving Genetics",
+      "description": "Want to grow your best mushrooms again and again? This episode teaches you how to clone your prize-winning fungi using agar to preserve their exact genetics for future grows.",
+      "audioSrc": "https://example.com/audio/ep17.mp3"
+    },
+    "18": {
+      "title": "Episode 18 – Long-Term Culture Storage – Prints, Slants, and Tubes",
+      "description": "Learn how to keep your prized mushroom cultures viable for the long term using techniques like spore prints, agar slants, and Castellani tubes so you can revisit your favourite genetics whenever you like.",
+      "audioSrc": "https://example.com/audio/ep18.mp3"
+    },
+    "19": {
+      "title": "Episode 19 – Logging Your Grows – Notebooks, Tags, and Digital Tracking",
+      "description": "Unlock the secrets to repeatable and scalable mushroom cultivation by learning essential grow logging techniques, from simple notebooks to digital dashboards and strain tracking.",
+      "audioSrc": "https://example.com/audio/ep19.mp3"
+    },
+    "20": {
+      "title": "Episode 20 – Harvesting, Drying, & Storing Mushrooms",
+      "description": "Master your mushroom harvest with this essential guide to knowing when and how to pick, dry to a cracker-dry crisp, and store your bounty for lasting potency and quality.",
+      "audioSrc": "https://example.com/audio/ep20.mp3"
+    },
+    "21": {
+      "title": "Episode 21 – Responsible Consumption and Microdosing",
+      "description": "Grown your own magic mushrooms? This episode is your safety-first guide to responsible consumption, covering everything from dosing and microdosing to trip preparation and integration.",
+      "audioSrc": "https://example.com/audio/ep21.mp3"
+    },
+    "22": {
+      "title": "Episode 22 – The Future of Psilocybin",
+      "description": "Discover the burgeoning future of psilocybin, from its evolving legal landscape and promising therapeutic applications to its cultural resurgence and the vital role of home growers.",
+      "audioSrc": "https://example.com/audio/ep22.mp3"
+    },
+    "23": {
+      "title": "Episode 23 – Psilocybin Mushrooms and the Law",
+      "description": "Understand the legal landscape of your magic mushroom hobby: from spore laws to international decriminalisation, and how to grow smart in a world where enforcement varies.",
+      "audioSrc": "https://example.com/audio/ep23.mp3"
+    }
+  }
+  

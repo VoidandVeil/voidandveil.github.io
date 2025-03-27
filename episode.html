@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Episode Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { 
+      font-family: sans-serif; 
+      max-width: 700px; 
+      margin: auto; 
+      padding: 2rem; 
+      background-color: #111; 
+      color: #eee; 
+    }
+    a { 
+      color: #86d9ca; 
+      text-decoration: none; 
+    }
+    a:hover { 
+      text-decoration: underline; 
+    }
+    audio { 
+      width: 100%; 
+      margin-top: 1rem; 
+    }
+  </style>
+</head>
+<body>
+  <h1 id="episode-title">Loading...</h1>
+  <p id="episode-description"></p>
+
+  <audio controls id="episode-audio">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p><a href="index.html">← Back to Home</a></p>
+
+  <!-- Footer Container for Common Footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to retrieve query parameters from the URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+  
+    const episodeId = getQueryParam("ep");
+  
+    fetch('episodes.json')
+      .then(response => response.json())
+      .then(episodes => {
+        if (episodeId && episodes[episodeId]) {
+          const episode = episodes[episodeId];
+          document.getElementById("episode-title").textContent = episode.title;
+          document.getElementById("episode-description").textContent = episode.description;
+          document.getElementById("episode-audio").src = episode.audioSrc;
+          document.title = episode.title;
+        } else {
+          document.getElementById("episode-title").textContent = "Episode Not Found";
+          document.getElementById("episode-description").textContent = "Sorry, we could not find the details for this episode.";
+        }
+      })
+      .catch(error => {
+        console.error('Error loading episodes data:', error);
+        document.getElementById("episode-title").textContent = "Error loading episode data";
+      });
+  </script>
+  
+  
+  <!-- Load the common footer dynamically -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+</body>
+</html>
