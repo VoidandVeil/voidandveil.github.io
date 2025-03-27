@@ -15,12 +15,26 @@ document.addEventListener("DOMContentLoaded", function() {
         const acceptBtn = document.getElementById("accept-btn");
         const declineBtn = document.getElementById("decline-btn");
         const dontShowCheckbox = document.getElementById("dont-show-checkbox");
+        const acceptTermsCheckbox = document.getElementById("accept-terms-checkbox");
+  
+        // Initially disable the Accept button until the mandatory checkbox is checked
+        acceptBtn.disabled = true;
+  
+        // Toggle the Accept button based on the mandatory checkbox
+        acceptTermsCheckbox.addEventListener("change", function() {
+          acceptBtn.disabled = !this.checked;
+        });
   
         acceptBtn.addEventListener("click", function() {
-          if (dontShowCheckbox.checked) {
-            localStorage.setItem("termsAccepted", "yes");
+          if (acceptTermsCheckbox.checked) {
+            if (dontShowCheckbox.checked) {
+              localStorage.setItem("termsAccepted", "yes");
+            }
+            overlay.style.display = "none";
+          } else {
+            // This should not occur since the button remains disabled unless checked
+            alert("You must accept the above terms to continue.");
           }
-          overlay.style.display = "none";
         });
   
         declineBtn.addEventListener("click", function() {

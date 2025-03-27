@@ -14,36 +14,80 @@
       border: 1px solid #444;
       border-radius: 8px;
       max-width: 500px;
-      text-align: center;">
-    <h2 style="color: #86d9ca;">✨🍄 Void & Veil Presents: A Mushroomy Disclaimer</h2>
-    <p>🎪 Step right up, dear traveler — but mind your step. You’re about to tiptoe through the wonderful and the wild world of fungi.</p>
-    <p>This podcast and site have been carefully crafted from spores, tales, and a deep love for the magic of mycelium.</p>
-    <p>We offer no spores under the counter, no glowing jars in dark alleys, nor any other dark arts — just knowledge shared under moonlight.</p>
-    <p>⚖️ But before we go ahead and share, we must warn you: The cultivation or use of psilocybin mushrooms may be illegal in your realm, kingdom, bureaucratic domain, or other such defined. Consult your local laws before conjuring anything suspicious in your shoebox.</p>
-    <p>🧙‍♂️ By continuing, you affirm that you are over 18 years old (or 21 if this applies in your region) and understand this is a scroll of study — not a step-by-step spellbook.</p>
-    <p>No potions. No parcels. No promises. Just whispers from the veil and fungi at the fringes.</p>
-    <p>Void & Veil welcomes you, dear traveler, to the world of mushroom cultivation. (Strictly for educational purposes only.)</p>
+      text-align: left;
+      line-height: 1.4;">
     
+    <!-- Title -->
+    <h2 style="color: #86d9ca; text-align: center;">
+      ✨🍄 Void & Veil Presents: A Mushroomy Disclaimer
+    </h2>
+    
+    <!-- Disclaimer Text -->
+    <p style="margin-bottom: 1rem;">
+      🎪 Step right up, dear traveler — but mind your step. You’re about to tiptoe through the wild and wonderful world of fungi.
+    </p>
+    <p style="margin-bottom: 1rem;">
+      This podcast and website have been carefully crafted from spores, tales, and a deep love for the magic of mycelium.
+    </p>
+    <p style="margin-bottom: 1rem;">
+      We offer no spores under the counter, no glowing jars in dark alleys, nor any other dark arts — just knowledge shared with others freely.
+    </p>
+    
+    <hr style="border: none; border-bottom: 1px solid #444; margin: 1.5rem 0;" />
+    
+    <p style="margin-bottom: 1rem;">
+      ⚖️ <strong>But before we go ahead and share, we must caution you:</strong> 
+    </p>
+    <p style="margin-bottom: 1rem;">
+      The cultivation or use of psilocybin mushrooms may be illegal in your realm, kingdom, bureaucratic domain, or other such defined. Consult your local laws before conjuring anything suspicious in your shoebox.
+    </p>
+    <p style="margin-bottom: 1rem;">
+      🧙‍♂️ By continuing, you affirm that you are <strong>over 18 years old (or 21 if this applies in your region)</strong> and understand this is a scroll of study — not a step-by-step spellbook.
+    </p>
+    <p style="margin-bottom: 1rem;">
+      No potions. No parcels. No promises. Just whispers from the veil and fungi at the fringes.
+    </p>
+    <p style="margin-bottom: 1rem;">
+      <strong>Void & Veil welcomes you, dear traveler, to the world of mushroom cultivation.</strong>
+    </p>
+    <p style="margin-bottom: 1rem;">
+        *Strictly for educational purposes only.*
+    </p>
+    
+    <!-- Checkboxes -->
     <label style="display: block; margin: 1rem 0;">
       <input type="checkbox" id="dont-show-checkbox">
       Don't show this popup again.
     </label>
-    <button id="accept-btn" style="
-            background-color: #86d9ca;
-            color: #111;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-            cursor: pointer;">Accept & Enter</button>
-    <button id="decline-btn" style="
-            background-color: #ccc;
-            color: #111;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            margin-top: 1rem;
-            cursor: pointer;
-            margin-left: 1rem;">Decline</button>
+    <label style="display: block; margin: 1rem 0;">
+      <input type="checkbox" id="accept-terms-checkbox">
+      I accept the above terms.
+    </label>
+    
+    <!-- Buttons (Accept initially disabled) -->
+    <div style="text-align: center;">
+      <button id="accept-btn" disabled style="
+              background-color: #86d9ca;
+              color: #111;
+              padding: 0.5rem 1rem;
+              border: none;
+              border-radius: 5px;
+              margin-top: 1rem;
+              cursor: pointer;">
+        Accept & Enter
+      </button>
+      <button id="decline-btn" style="
+              background-color: #ccc;
+              color: #111;
+              padding: 0.5rem 1rem;
+              border: none;
+              border-radius: 5px;
+              margin-top: 1rem;
+              cursor: pointer;
+              margin-left: 1rem;">
+        Decline
+      </button>
+    </div>
+    
   </div>
 </div>
