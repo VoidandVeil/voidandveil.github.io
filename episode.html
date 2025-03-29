@@ -5,28 +5,31 @@
   <title>Episode Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { 
-      font-family: sans-serif; 
-      max-width: 700px; 
-      margin: auto; 
-      padding: 2rem; 
-      background-color: #111; 
-      color: #eee; 
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #111;
+      color: #eee;
     }
-    a { 
-      color: #86d9ca; 
-      text-decoration: none; 
+    a {
+      color: #86d9ca;
+      text-decoration: none;
     }
-    a:hover { 
-      text-decoration: underline; 
+    a:hover {
+      text-decoration: underline;
     }
-    audio { 
-      width: 100%; 
-      margin-top: 1rem; 
+    audio {
+      width: 100%;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
+  <!-- Header Container -->
+  <div id="header-container"></div>
+
   <h1 id="episode-title">Loading...</h1>
   <p id="episode-description"></p>
 
@@ -36,18 +39,18 @@
 
   <p><a href="index.html">← Back to Home</a></p>
 
-  <!-- Footer Container for Common Footer -->
+  <!-- Footer Container -->
   <div id="footer-container"></div>
 
   <script>
-    // Function to retrieve query parameters from the URL
+    // Load episode data
     function getQueryParam(param) {
       const urlParams = new URLSearchParams(window.location.search);
       return urlParams.get(param);
     }
-  
+
     const episodeId = getQueryParam("ep");
-  
+
     fetch('episodes.json')
       .then(response => response.json())
       .then(episodes => {
@@ -66,11 +69,15 @@
         console.error('Error loading episodes data:', error);
         document.getElementById("episode-title").textContent = "Error loading episode data";
       });
-  </script>
-  
-  
-  <!-- Load the common footer dynamically -->
-  <script>
+
+    // Load reusable components
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {

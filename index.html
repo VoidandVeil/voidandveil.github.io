@@ -5,7 +5,6 @@
   <title>Void & Veil – Psilocybin Mushroom Cultivation Podcast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Main page styling */
     body {
       font-family: sans-serif;
       max-width: 800px;
@@ -27,7 +26,6 @@
     .section {
       margin-bottom: 2rem;
     }
-    /* Ensure the popup container layers above your content */
     #terms-container {
       z-index: 10000;
     }
@@ -41,6 +39,9 @@
   </style>
 </head>
 <body>
+  <!-- Header Container -->
+  <div id="header-container"></div>
+
   <!-- Main Content -->
   <div id="content">
     <h1>🍄 Psilocybin Mushroom Cultivation for Beginners</h1>
@@ -116,13 +117,19 @@
   <!-- Footer Container -->
   <div id="footer-container"></div>
 
-  <!-- Popup container for the external terms modal -->
+  <!-- Terms Popup -->
   <div id="terms-container"></div>
 
-  <!-- Load external JavaScript for the popup -->
+  <!-- Scripts -->
   <script src="terms.js" defer></script>
-  <!-- Load the common footer -->
   <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+
     fetch('footer.html')
       .then(response => response.text())
       .then(data => {

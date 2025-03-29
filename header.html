@@ -1,0 +1,59 @@
+<!-- header.html -->
+<style>
+    nav {
+      background-color: #111;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h2 {
+      margin: 0;
+      color: #ffe800;
+    }
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #86d9ca;
+      cursor: pointer;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      padding: 1rem 0;
+    }
+    .nav-links a {
+      color: #ffe800;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .nav-open .nav-links {
+      display: flex;
+    }
+    @media (min-width: 600px) {
+      .menu-toggle {
+        display: none;
+      }
+      .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+      }
+    }
+  </style>
+  
+  <nav>
+    <h2>Navigation</h2>
+    <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('nav-open')">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bio.html">About</a>
+    </div>
+  </nav>
+  

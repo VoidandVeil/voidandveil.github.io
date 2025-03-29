@@ -29,9 +29,19 @@
       padding-top: 1rem;
       text-align: center;
     }
+    a {
+      color: #86d9ca;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <!-- Header Container -->
+  <div id="header-container"></div>
+
   <h1>🌑 Void & Veil 🌕</h1>
   <div style="text-align:center; margin-bottom: 2rem;">
     <img src="assets/avatar.png" alt="Avatar of Void & Veil" style="border-radius: 50%; width: 180px; height: 180px; border: 2px solid #444;">
@@ -49,6 +59,16 @@
   <div class="footer">
     🍄 All content licensed under Creative Commons BY-NC 4.0. Stay safe. Stay curious. Stay kind.
   </div>
-  <p style="text-align:center; margin-top: 2rem;"><a href="index.html" style="color: #86d9ca;">← Back to Home</a></p>
+  <p style="text-align:center; margin-top: 2rem;"><a href="index.html">&larr; Back to Home</a></p>
+
+  <!-- Load the common header dynamically -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>
 </body>
 </html>
