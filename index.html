@@ -40,8 +40,6 @@
   </style>
 </head>
 <body>
-  <!-- Country Tracker -->
-  <div id="flag-tracker" style="margin-top: 2rem;"></div>
   <!-- Header Container -->
   <div id="header-container"></div>
 
@@ -140,6 +138,18 @@
       })
       .catch(error => console.error('Error loading footer:', error));
   </script>
-  <script src="countrytracker.js" defer></script>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+  
+        // Run country tracker AFTER header (and #flag-tracker) is injected
+        const script = document.createElement('script');
+        script.src = 'countrytracker.js';
+        document.body.appendChild(script);
+      })
+      .catch(error => console.error('Error loading header:', error));
+  </script>  
 </body>
 </html>
