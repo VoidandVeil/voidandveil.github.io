@@ -1,48 +1,61 @@
-<!-- header.html -->
 <style>
     nav {
-      background-color: #111;
-      padding: 1rem 0;
+      background-color: #11111100;
+      padding: 0.5rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+  
     nav h2 {
       margin: 0;
       color: #ffe800;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
+  
     .menu-toggle {
       background: none;
       border: none;
       font-size: 1.5rem;
-      color: #86d9ca;
+      color: #ffe800;
       cursor: pointer;
     }
+  
     .nav-links {
       display: none;
       flex-direction: column;
-      background-color: #111;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
     }
+  
     .nav-links a {
       color: #ffe800;
       text-decoration: none;
       padding: 0.5rem 1rem;
+      font-size: 0.95rem;
     }
+  
     .nav-links a:hover {
       text-decoration: underline;
     }
+  
     .nav-open .nav-links {
       display: flex;
     }
+  
     @media (min-width: 600px) {
       .menu-toggle {
         display: none;
       }
+  
       .nav-links {
         display: flex !important;
         flex-direction: row;
-        gap: 1rem;
+        gap: 1.5rem;
+        padding: 0;
+      }
+  
+      .nav-links a {
         padding: 0;
       }
     }
