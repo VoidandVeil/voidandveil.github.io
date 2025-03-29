@@ -182,3 +182,36 @@ button[type="submit"]:hover {
   background-color: #111;
   border-color: #ffe800;
 }
+<style>
+  .counter {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    font-size: 0.9rem;
+    color: #666;
+    position: relative;
+    display: inline-block;
+  }
+
+  .counter.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .counter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 2s ease-in-out 1;
+  }
+
+  @keyframes shimmer {
+    0% { left: -75%; }
+    100% { left: 125%; }
+  }
+</style>

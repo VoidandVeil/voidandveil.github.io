@@ -106,16 +106,45 @@
       content.style.display = "block";
     });
 
-    // Visitor counter logic
-    fetch("https://sheetdb.io/api/v1/5og12wyejagwd")
-      .then(res => res.json())
-      .then(data => {
-        const count = Array.isArray(data) ? data.length : 0;
-        document.getElementById("visitor-counter").innerText = `Travelers before you: ${count}`;
-      })
-      .catch(() => {
-        document.getElementById("visitor-counter").innerText = "Travelers before you: ???";
-      });
+    
   </script>
+  <script>
+    const sheetdbApi = "https://sheetdb.io/api/v1/5og12wyejagwd";
+    const thisPage = "veil"; // ← change this to "veil" in veil.html
+  
+    async function logTraveler() {
+      try {
+        // 1. Log this visit
+        await fetch(sheetdbApi, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ data: [{ page: thisPage, timestamp: new Date().toISOString() }] })
+        });
+  
+        // 2. Fetch all entries for this page
+        const res = await fetch(`${sheetdbApi}/search?page=${thisPage}`);
+        const data = await res.json();
+        const previousTravelers = Math.max(0, data.length - 1);
+  
+        const counter = document.createElement("p");
+        counter.className = "counter";
+        counter.textContent = `Travelers before you: ${previousTravelers}`;
+        counter.style.marginTop = "2rem";
+        counter.style.fontSize = "0.9rem";
+        counter.style.color = "#666";
+  
+        document.getElementById("content").appendChild(counter);
+        setTimeout(() => counter.classList.add("reveal"), 50);
+      } catch (err) {
+        console.error("Could not track traveler count:", err);
+      }
+    }
+  
+    // Trigger after user clicks "Enter"
+    enterBtn.addEventListener("click", () => {
+      logTraveler();
+    });
+  </script>
+  
 </body>
 </html>
