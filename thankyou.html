@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 10000); // 10 seconds
+  </script>
+</head>
+<body>
+  <div id="header-container"></div>
+
+  <h1>✅ Message Sent</h1>
+  <p>Thank you for reaching out to Void & Veil. We'll get back to you if needed.</p>
+  <p>You will be redirected to the homepage in <strong>10 seconds</strong>.</p>
+
+  <p style="text-align: center; margin-top: 2rem;">
+    <a href="index.html">&larr; Return Now</a>
+  </p>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'countrytracker.js';
+        document.body.appendChild(script);
+      });
+  </script>
+</body>
+</html>
