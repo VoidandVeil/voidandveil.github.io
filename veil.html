@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    🧠 Some pages are real, others imagined.
+    Hint: The void echoes at /veil.html
+  -->
+  <meta charset="UTF-8" />
+  <title>☁️ The Veil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #ffe800;
+      font-family: monospace;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #enter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: #ffe800;
+      text-decoration: underline;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    #content {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    .veil-message {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      animation: pulse 3s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    video.bg-video {
+      position: relative;
+      max-width: 80vw;
+      max-height: 80vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+      z-index: 1;
+    }
+
+    a {
+      color: #ffe800;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    🌑 You came seeking the void, but something else stirs.
+    The veil remembers. Look closer.
+    A whisper sleeps beyond this file.
+  -->
+  <div id="enter">Enter the void</div>
+
+  <div id="content">
+    <p id="visitor-counter" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #888;">Travelers before you: ...</p>
+
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="assets/veil-void-bg.mp4" type="video/mp4">
+    </video>
+
+    <div class="veil-message">
+      ☁️ You’ve lifted the veil.<br/>
+      The spores whisper a different story here.
+    </div>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+      <a href="index.html">⬅ Return</a>
+    </p>
+  </div>
+
+  <script>
+    const enterBtn = document.getElementById("enter");
+    const content = document.getElementById("content");
+
+    enterBtn.addEventListener("click", () => {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+      enterBtn.style.display = "none";
+      content.style.display = "block";
+    });
+
+    // Visitor counter logic
+    fetch("https://sheetdb.io/api/v1/5og12wyejagwd")
+      .then(res => res.json())
+      .then(data => {
+        const count = Array.isArray(data) ? data.length : 0;
+        document.getElementById("visitor-counter").innerText = `Travelers before you: ${count}`;
+      })
+      .catch(() => {
+        document.getElementById("visitor-counter").innerText = "Travelers before you: ???";
+      });
+  </script>
+</body>
+</html>

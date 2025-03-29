@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--
+    🌑 You came seeking the void, but something else stirs.
+    The veil remembers. Look closer.
+    A whisper sleeps beyond this file.
+  -->
   <meta charset="UTF-8" />
   <title>🌫️ The Void</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,17 +63,19 @@
       display: block;
       z-index: 1;
     }
+
+    a {
+      color: #ffe800;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-    <!--
-  🌑 You came seeking the void, but something else stirs.
-  The \veil remembers. Look closer.
-  A whisper sleeps beyond this file.
--->
   <div id="enter">Enter the veil</div>
 
   <div id="content">
+    <p id="visitor-counter" style="margin-bottom: 1.5rem; font-size: 0.95rem; color: #888;">Travelers before you: ...</p>
+
     <video class="bg-video" autoplay muted loop playsinline>
       <source src="assets/void-veil-bg.mp4" type="video/mp4">
     </video>
@@ -78,8 +85,8 @@
       The mycelium dreams in colors you cannot name.
     </div>
 
-    <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
-      <a href="index.html" style="color: #86d9ca;">⬅ Return</a>
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">
+      <a href="index.html">⬅ Return</a>
     </p>
   </div>
 
@@ -94,6 +101,17 @@
       enterBtn.style.display = "none";
       content.style.display = "block";
     });
+
+    // Visitor counter logic
+    fetch("https://sheetdb.io/api/v1/5og12wyejagwd")
+      .then(res => res.json())
+      .then(data => {
+        const count = Array.isArray(data) ? data.length : 0;
+        document.getElementById("visitor-counter").innerText = `Travelers before you: ${count}`;
+      })
+      .catch(() => {
+        document.getElementById("visitor-counter").innerText = "Travelers before you: ???";
+      });
   </script>
 </body>
 </html>
